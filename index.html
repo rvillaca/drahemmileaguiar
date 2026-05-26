@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Dra. Hemmile Aguiar | Ginecologista em Curitiba</title>
+    <meta name="description" content="Atendimento em ginecologia, saúde feminina, menopausa, anticoncepção e estética íntima em Curitiba. CRM-PR 40660 | RQE 34151.">
+    <meta name="keywords" content="ginecologista Curitiba, Dra. Hemmile Aguiar, saúde feminina Curitiba, menopausa Curitiba, estética íntima Curitiba, anticoncepção, ginecologia endócrina, CRM-PR 40660">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dra. Hemmile Aguiar | Ginecologista em Curitiba">
+    <meta property="og:description" content="Atendimento ginecológico com avaliação individualizada, segurança e cuidado humanizado.">
+    <meta property="og:image" content="assets/images/medica-hero.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Integrado -->
+    <style>
+        /* === VARIÁVEIS DE COR E TIPOGRAFIA === */
+        :root {
+            --off-white: #FAF7F3;
+            --branco: #FFFFFF;
+            --nude-claro: #F3E6DD;
+            --nude-medio: #E8D1C5;
+            --rosa-suave: #EFD3D8;
+            --rose: #D9A7AD;
+            --rose-profundo: #A96F78;
+            --vinho-elegante: #6F2E3A;
+            --bordo-profundo: #4A1F2A;
+            --marrom-suave: #7A5C52;
+            --cinza-quente: #6F6663;
+            --cinza-claro-quente: #F4F0ED;
+            --texto-principal: #2B2422;
+            --texto-secundario: #6F6663;
+
+            --font-title: 'Cormorant Garamond', serif;
+            --font-body: 'Manrope', sans-serif;
+            
+            --transition: all 0.3s ease;
+            --shadow-sm: 0 4px 12px rgba(111, 46, 58, 0.05);
+            --shadow-md: 0 8px 24px rgba(111, 46, 58, 0.08);
+            --border-radius: 12px;
+            --safe-top: env(safe-area-inset-top, 0px);
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        /* === RESET E CONFIGURAÇÕES GERAIS === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--texto-principal);
+            background-color: var(--off-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 5vw, 40px);
+        }
+
+        section {
+            padding: clamp(60px, 10vw, 100px) 0;
+        }
+
+        /* === TIPOGRAFIA === */
+        h1, h2, h3, h4 {
+            font-family: var(--font-title);
+            color: var(--bordo-profundo);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: clamp(40px, 6vw, 60px);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            color: var(--texto-secundario);
+            font-weight: 400;
+        }
+
+        /* === BOTÕES === */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--bordo-profundo);
+            color: var(--branco);
+            border: 2px solid var(--bordo-profundo);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--vinho-elegante);
+            border-color: var(--vinho-elegante);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--bordo-profundo);
+            border: 2px solid var(--bordo-profundo);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bordo-profundo);
+            color: var(--branco);
+            transform: translateY(-2px);
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* === HEADER E MENU === */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid transparent;
+            padding-top: var(--safe-top);
+        }
+
+        header.scrolled {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--nude-claro);
+            padding: 5px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-name {
+            font-family: var(--font-title);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--bordo-profundo);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: var(--texto-secundario);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--texto-secundario);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--bordo-profundo);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--rose-profundo);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 5px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--bordo-profundo);
+            transition: var(--transition);
+        }
+
+        /* === HERO SECTION === */
+        #hero {
+            padding-top: calc(140px + var(--safe-top));
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--nude-claro) 48%, var(--rosa-suave) 100%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(40px, 5vw, 60px);
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-badges {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--bordo-profundo);
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid var(--nude-medio);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: var(--texto-secundario);
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            aspect-ratio: 4/5;
+        }
+
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px solid var(--branco);
+            border-radius: 24px;
+            z-index: 1;
+            pointer-events: none;
+            margin: 16px;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.7s ease;
+        }
+
+        .hero-image-wrapper:hover .hero-img {
+            transform: scale(1.03);
+        }
+
+        /* === SOBRE A MÉDICA === */
+        #sobre {
+            background-color: var(--branco);
+        }
+
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: clamp(40px, 6vw, 80px);
+            align-items: center;
+        }
+
+        .sobre-img-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 3/4;
+        }
+
+        .sobre-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sobre-texto p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: var(--texto-secundario);
+        }
+
+        .formacao-list {
+            margin: 30px 0;
+            padding-left: 0;
+        }
+
+        .formacao-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--texto-principal);
+            font-weight: 500;
+        }
+
+        .formacao-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--rose-profundo);
+            font-size: 1.5rem;
+            line-height: 1;
+            top: -2px;
+        }
+
+        /* === ÁREAS DE ATUAÇÃO === */
+        #atuacao {
+            background-color: var(--cinza-claro-quente);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--branco);
+            padding: 32px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--nude-medio);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--rose-profundo);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--nude-claro);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--vinho-elegante);
+        }
+
+        .card-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .card-desc {
+            color: var(--texto-secundario);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        /* === SERVIÇOS === */
+        #servicos {
+            background-color: var(--branco);
+        }
+
+        .servicos-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .servico-item {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--nude-medio);
+        }
+
+        .servico-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .servico-item h3::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--rose-profundo);
+        }
+
+        .servico-item p {
+            color: var(--texto-secundario);
+            padding-left: 16px;
+            font-size: 0.95rem;
+        }
+
+        /* === JORNADA DE CUIDADO === */
+        #jornada {
+            background-color: var(--off-white);
+        }
+
+        .jornada-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .step {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .step-num {
+            width: 60px;
+            height: 60px;
+            background-color: var(--bordo-profundo);
+            color: var(--branco);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            margin: 0 auto 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: var(--texto-secundario);
+            font-size: 0.95rem;
+        }
+
+        .jornada-btn-wrapper {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* === QUANDO PROCURAR === */
+        #quando-procurar {
+            background-color: var(--branco);
+        }
+
+        .quando-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .quando-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .quando-lista li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: var(--off-white);
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid var(--nude-claro);
+        }
+
+        .quando-lista li svg {
+            color: var(--vinho-elegante);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .quando-img {
+            border-radius: 20px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        .quando-footer {
+            margin-top: 40px;
+            text-align: center;
+            background: var(--nude-claro);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        /* === LOCALIZAÇÃO === */
+        #localizacao {
+            background-color: var(--cinza-claro-quente);
+        }
+
+        .local-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .local-card {
+            background: var(--branco);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--bordo-profundo);
+        }
+
+        .local-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+
+        .local-info {
+            margin-bottom: 24px;
+            color: var(--texto-secundario);
+        }
+
+        .local-info p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .local-info svg {
+            color: var(--rose-profundo);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .alerta-info {
+            background: #FFF3E0;
+            color: #E65100;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .local-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        /* === CTA BANNER === */
+        #cta {
+            background: linear-gradient(135deg, var(--bordo-profundo) 0%, var(--vinho-elegante) 100%);
+            color: var(--branco);
+            text-align: center;
+        }
+
+        #cta h2 {
+            color: var(--branco);
+        }
+
+        #cta .section-subtitle {
+            color: var(--nude-claro);
+            margin-bottom: 40px;
+        }
+
+        .cta-disclaimer {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        #cta .btn-primary {
+            background-color: var(--branco);
+            color: var(--bordo-profundo);
+            border-color: var(--branco);
+        }
+
+        #cta .btn-primary:hover {
+            background-color: var(--off-white);
+            color: var(--vinho-elegante);
+        }
+
+        /* === INSTAGRAM === */
+        #instagram {
+            background-color: var(--branco);
+        }
+
+        .ig-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .ig-post {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            display: block;
+            background: var(--branco);
+            border: 1px solid var(--nude-medio);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .ig-post iframe {
+            display: block;
+            width: 100%;
+            min-height: 700px;
+            border: 0;
+        }
+
+        .ig-btn-wrapper {
+            text-align: center;
+        }
+
+        /* === FAQ === */
+        #faq {
+            background-color: var(--off-white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--branco);
+            margin-bottom: 16px;
+            border-radius: 8px;
+            border: 1px solid var(--nude-medio);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--bordo-profundo);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--rose-profundo);
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-content {
+            padding: 0 20px 20px;
+            color: var(--texto-secundario);
+            font-size: 0.95rem;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background-color: var(--bordo-profundo);
+            color: var(--branco);
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            color: var(--branco);
+            margin-bottom: 24px;
+            font-size: 1.4rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .footer-sub {
+            color: var(--rose);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--rose);
+            padding-left: 5px;
+        }
+
+        .footer-disclaimer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px 0;
+            margin-bottom: 24px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: justify;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* === WHATSAPP FLUTUANTE === */
+        .whatsapp-float {
+            position: fixed;
+            bottom: calc(30px + var(--safe-bottom));
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* === ANIMAÇÕES === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === RESPONSIVIDADE === */
+        @media (max-width: 1024px) {
+            .hero-grid, .sobre-grid, .quando-grid {
+                gap: 40px;
+            }
+
+            .ig-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            header .btn {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: calc(80px + var(--safe-top));
+                left: -100%;
+                width: 100%;
+                height: calc(100dvh - 80px - var(--safe-top));
+                background-color: var(--branco);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                transition: 0.4s ease;
+                padding-bottom: calc(24px + var(--safe-bottom));
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                font-size: 1.2rem;
+            }
+
+            .hero-grid, .sobre-grid, .quando-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                order: 2;
+                text-align: center;
+            }
+
+            .hero-image-wrapper {
+                order: 1;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .sobre-img-wrapper, .quando-img {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .whatsapp-float {
+                bottom: calc(20px + var(--safe-bottom));
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .ig-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ig-post iframe {
+                min-height: 680px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- === HEADER === -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo-box">
+                <span class="logo-name">Dra. Hemmile Aguiar</span>
+                <span class="logo-sub">Ginecologia e Obstetrícia</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#atuacao" class="nav-link">Áreas de atuação</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#localizacao" class="nav-link">Localização</a></li>
+                </ul>
+            </nav>
+
+            <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">
+                Agendar consulta
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- === HERO SECTION === -->
+        <section id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content fade-in">
+                    <div class="hero-badges">CRM-PR 40660 | RQE 34151</div>
+                    <h1 class="hero-title">Atendimento ginecológico com avaliação individualizada, segurança e cuidado humanizado.</h1>
+                    <p class="hero-subtitle">Cuidado em saúde feminina, menopausa, estética íntima, anticoncepção e ginecologia endócrina, com foco em escuta, orientação clara e acompanhamento personalizado.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            Agendar pelo WhatsApp
+                        </a>
+                        <a href="#atuacao" class="btn btn-secondary">
+                            Conhecer áreas de atuação
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper fade-in">
+                    <!-- Imagem recomendada: profissional, rosto visível, ambiente claro -->
+                    <!-- Substituir pela imagem real em /assets/images/ -->
+                    <img src="assets/images/medica-hero.jpg" alt="Foto profissional da Dra. Hemmile Aguiar" class="hero-img" onerror="this.src='https://images.unsplash.com/photo-1594824436998-dd40e4f2084c?auto=format&fit=crop&q=80&w=800&h=1000'">
+                </div>
+            </div>
+        </section>
+
+        <!-- === SOBRE SECTION === -->
+        <section id="sobre">
+            <div class="container sobre-grid">
+                <div class="sobre-img-wrapper fade-in">
+                    <!-- Substituir pela imagem real em /assets/images/ -->
+                    <img src="assets/images/medica-sobre.jpg" alt="Dra. Hemmile Aguiar em ambiente médico institucional" onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600&h=800'">
+                </div>
+                <div class="sobre-texto fade-in">
+                    <h2 class="section-title">Sobre a Dra. Hemmile Aguiar</h2>
+                    <p>Dra. Hemmile Aguiar é médica ginecologista, com atuação voltada à saúde feminina, menopausa, estética íntima, anticoncepção, ginecologia endócrina e cuidado integral da mulher. Seu atendimento é orientado por avaliação individualizada, escuta cuidadosa, orientação clara e acompanhamento humanizado.</p>
+                    <p>Cada fase da vida da mulher pode trazer dúvidas, sintomas e necessidades específicas. Por isso, o atendimento deve valorizar a individualidade de cada paciente, considerando histórico de saúde, objetivos, exames, sintomas e contexto clínico antes da definição de qualquer conduta.</p>
+                    
+                    <ul class="formacao-list">
+                        <li>Graduação em Medicina na Faculdade Evangélica do Paraná.</li>
+                        <li>Estágio nos Estados Unidos no Brigham and Women’s Hospital.</li>
+                        <li>Residência Médica em Ginecologia e Obstetrícia na Santa Casa de Curitiba.</li>
+                        <li>CRM-PR 40660 | RQE 34151.</li>
+                    </ul>
+
+                    <p>Sua trajetória une formação técnica, experiência profissional e atenção ao cuidado humano, sempre respeitando a individualidade, os objetivos e as condições clínicas de cada paciente.</p>
+                    
+                    <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 10px;">
+                        Agendar avaliação
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- === ÁREAS DE ATUAÇÃO === -->
+        <section id="atuacao">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Áreas de atuação</h2>
+                    <p class="section-subtitle">Atendimento ginecológico com avaliação individualizada, planejamento cuidadoso e indicação conforme as necessidades de cada paciente.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Card 1 -->
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                        </div>
+                        <h3 class="card-title">Saúde feminina</h3>
+                        <p class="card-desc">Acompanhamento ginecológico voltado à prevenção, orientação e cuidado integral em diferentes fases da vida da mulher.</p>
+                        <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-secondary btn-small">Agendar consulta</a>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        </div>
+                        <h3 class="card-title">Ginecologia</h3>
+                        <p class="card-desc">Avaliação de sintomas, exames, rotina ginecológica e acompanhamento clínico conforme a necessidade individual.</p>
+                        <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-secondary btn-small">Agendar consulta</a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                        </div>
+                        <h3 class="card-title">Menopausa e climatério</h3>
+                        <p class="card-desc">Orientação e avaliação médica de sintomas, mudanças hormonais e cuidados relacionados a essa fase da vida.</p>
+                        <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-secondary btn-small">Agendar consulta</a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        </div>
+                        <h3 class="card-title">Anticoncepção</h3>
+                        <p class="card-desc">Orientação sobre métodos contraceptivos com base no histórico, nas preferências e nas condições clínicas de cada paciente.</p>
+                        <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-secondary btn-small">Agendar consulta</a>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                        </div>
+                        <h3 class="card-title">Ginecologia endócrina</h3>
+                        <p class="card-desc">Avaliação de alterações hormonais, irregularidades menstruais e condições relacionadas ao equilíbrio hormonal feminino.</p>
+                        <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-secondary btn-small">Agendar consulta</a>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" /></svg>
+                        </div>
+                        <h3 class="card-title">Estética íntima</h3>
+                        <p class="card-desc">Avaliação médica individualizada de queixas íntimas, autoestima, conforto e possibilidades terapêuticas, com indicação responsável.</p>
+                        <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-secondary btn-small">Agendar consulta</a>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="card-title">Longevidade saudável</h3>
+                        <p class="card-desc">Cuidado preventivo e orientação em saúde feminina com foco em bem-estar, acompanhamento médico e qualidade de vida.</p>
+                        <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-secondary btn-small">Agendar consulta</a>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        </div>
+                        <h3 class="card-title">Cirurgia ginecológica</h3>
+                        <p class="card-desc">Avaliação de condições ginecológicas que possam exigir investigação, acompanhamento especializado ou eventual indicação cirúrgica.</p>
+                        <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-secondary btn-small">Agendar consulta</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === SERVIÇOS === -->
+        <section id="servicos">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Serviços</h2>
+                    <p class="section-subtitle">Atendimento médico com escuta, orientação e planejamento individualizado.</p>
+                </div>
+
+                <div class="servicos-list">
+                    <div class="servico-item fade-in">
+                        <h3>Consulta ginecológica</h3>
+                        <p>Consulta voltada à avaliação clínica, orientação preventiva, análise de sintomas e acompanhamento da saúde da mulher.</p>
+                    </div>
+                    <div class="servico-item fade-in">
+                        <h3>Avaliação ginecológica especializada</h3>
+                        <p>Avaliação de queixas, exames e histórico de saúde para definição de conduta médica individualizada.</p>
+                    </div>
+                    <div class="servico-item fade-in">
+                        <h3>Acompanhamento da saúde da mulher</h3>
+                        <p>Seguimento médico em diferentes fases da vida, com foco em prevenção, orientação e cuidado contínuo.</p>
+                    </div>
+                    <div class="servico-item fade-in">
+                        <h3>Orientação contraceptiva</h3>
+                        <p>Discussão individualizada sobre métodos contraceptivos, considerando segurança, preferências e condições clínicas.</p>
+                    </div>
+                    <div class="servico-item fade-in">
+                        <h3>Avaliação de menopausa e climatério</h3>
+                        <p>Acompanhamento de sintomas e mudanças hormonais com orientação médica adequada para cada caso.</p>
+                    </div>
+                    <div class="servico-item fade-in">
+                        <h3>Saúde íntima feminina</h3>
+                        <p>Avaliação de queixas íntimas, desconfortos e possibilidades de cuidado, sempre com abordagem ética e individualizada.</p>
+                    </div>
+                    <div class="servico-item fade-in">
+                        <h3>Orientação preventiva</h3>
+                        <p>Educação em saúde, prevenção, acompanhamento periódico e esclarecimento de dúvidas ginecológicas.</p>
+                    </div>
+                    <div class="servico-item fade-in">
+                        <h3>Segunda opinião médica</h3>
+                        <p>Avaliação do caso, exames prévios e diagnóstico para fornecer uma segunda visão técnica quando aplicável e solicitado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === JORNADA DE CUIDADO === -->
+        <section id="jornada">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Uma jornada de cuidado completa</h2>
+                    <p class="section-subtitle">O cuidado ginecológico deve ser conduzido com escuta, avaliação adequada e orientação clara, respeitando as necessidades e o momento de vida de cada paciente.</p>
+                </div>
+
+                <div class="jornada-steps">
+                    <div class="step fade-in">
+                        <div class="step-num">1</div>
+                        <h3>Avaliação inicial</h3>
+                        <p>Entendimento das queixas, objetivos, histórico de saúde, exames prévios e condições clínicas.</p>
+                    </div>
+                    <div class="step fade-in">
+                        <div class="step-num">2</div>
+                        <h3>Planejamento individualizado</h3>
+                        <p>Definição da melhor estratégia conforme avaliação médica, segurança, necessidades individuais e conduta técnica adequada.</p>
+                    </div>
+                    <div class="step fade-in">
+                        <div class="step-num">3</div>
+                        <h3>Conduta médica</h3>
+                        <p>Realização do acompanhamento, tratamento ou procedimento indicado com atenção à segurança e ao cuidado previamente planejado.</p>
+                    </div>
+                    <div class="step fade-in">
+                        <div class="step-num">4</div>
+                        <h3>Acompanhamento humanizado</h3>
+                        <p>Orientações claras, seguimento médico e cuidado contínuo conforme a necessidade de cada paciente.</p>
+                    </div>
+                </div>
+
+                <div class="jornada-btn-wrapper fade-in">
+                    <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-primary">
+                        Agendar consulta
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- === QUANDO PROCURAR === -->
+        <section id="quando-procurar">
+            <div class="container quando-grid">
+                <div class="quando-content fade-in">
+                    <h2 class="section-title">Quando procurar avaliação com ginecologista?</h2>
+                    <p style="margin-bottom: 24px; color: var(--texto-secundario);">Algumas situações podem motivar uma avaliação ginecológica especializada, especialmente quando envolvem sintomas, dúvidas, desconforto, alterações hormonais, necessidade de orientação ou acompanhamento individualizado.</p>
+                    
+                    <ul class="quando-lista">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                            <span>Rotina ginecológica e prevenção</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                            <span>Irregularidade menstrual</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                            <span>Cólicas intensas ou dor pélvica</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                            <span>Sintomas relacionados à menopausa ou climatério</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                            <span>Dúvidas sobre anticoncepção</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                            <span>Queixas íntimas ou desconforto na região íntima</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                            <span>Alterações hormonais</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                            <span>Acompanhamento da saúde feminina em diferentes fases da vida</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="quando-img-wrapper fade-in">
+                    <!-- Substituir pela imagem real em /assets/images/ -->
+                    <img src="assets/images/area-saude-feminina.jpg" alt="Imagem institucional sobre saúde feminina e prevenção" class="quando-img" onerror="this.src='https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800&h=800'">
+                </div>
+            </div>
+            <div class="container fade-in">
+                <div class="quando-footer">
+                    <p style="margin-bottom: 20px; font-weight: 500;">A avaliação médica é essencial para compreender o caso, orientar possibilidades, esclarecer riscos e definir a conduta mais adequada de forma individualizada.</p>
+                    <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" class="btn btn-primary">Agendar consulta pelo WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- === LOCALIZAÇÃO === -->
+        <section id="localizacao">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Local de atendimento</h2>
+                    <p class="section-subtitle">Atendimento presencial em Curitiba — PR</p>
+                </div>
+
+                <div class="local-grid">
+                    <!-- Card Werka -->
+                    <div class="local-card fade-in">
+                        <h3>Clínica Werka — Saúde & Longevidade</h3>
+                        <div class="local-info">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                <span>Avenida Sete de Setembro, 4682, Batel, Curitiba — PR<br>
+                                Sala 2101</span>
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span>Horário: atendimento com agenda previamente marcada</span>
+                            </p>
+                        </div>
+                        <div class="local-buttons">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica%20Werka%20Sa%C3%BAde%20e%20Longevidade%20Avenida%20Sete%20de%20Setembro%204682%20Batel%20Curitiba%20PR" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Ver rota</a>
+                            <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">Agendar consulta</a>
+                        </div>
+                    </div>
+
+                    <!-- Card Lumière (Opcional) -->
+                    <div class="local-card fade-in">
+                        <h3>Lumière Saúde Integrada</h3>
+                        <div class="local-info">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                <span>Rua Dr. Goulin, 321, Alto da Glória, Curitiba — PR</span>
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span>Horário da clínica: 08:30–12:00 e 13:30–18:00</span>
+                            </p>
+                        </div>
+                        <div class="local-buttons">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Lumi%C3%A8re%20Sa%C3%BAde%20Integrada%20Rua%20Dr.%20Goulin%20321%20Alto%20da%20Gl%C3%B3ria%20Curitiba%20PR" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Ver rota</a>
+                            <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">Agendar consulta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === CTA DESTAQUE === -->
+        <section id="cta">
+            <div class="container fade-in">
+                <h2 class="section-title">Agende sua consulta</h2>
+                <p class="section-subtitle" style="max-width: 600px; margin-left: auto; margin-right: auto;">Para agendar uma consulta ou obter mais informações sobre o atendimento com a Dra. Hemmile Aguiar, clique no botão abaixo e fale com a equipe pelo WhatsApp.</p>
+                
+                <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 36px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    Agendar pelo WhatsApp
+                </a>
+
+                <p class="cta-disclaimer">O atendimento, diagnóstico e indicação de tratamento dependem de avaliação médica individualizada.</p>
+            </div>
+        </section>
+
+        <!-- === INSTAGRAM === -->
+        <section id="instagram">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Acompanhe no Instagram</h2>
+                    <p class="section-subtitle">Veja conteúdos informativos sobre saúde feminina, ginecologia, menopausa, cuidados íntimos, prevenção e orientações educativas.</p>
+                </div>
+
+                <div class="ig-grid">
+                    <!-- Substituir pelas imagens reais salvas localmente -->
+                    <div class="ig-post fade-in">
+                        <iframe src="https://www.instagram.com/p/DYpz7lFllyG/embed" loading="lazy" allowtransparency="true" title="Post do Instagram da Dra. Hemmile Aguiar 1"></iframe>
+                    </div>
+                    <div class="ig-post fade-in">
+                        <iframe src="https://www.instagram.com/p/DYk9KXYMhI3/embed" loading="lazy" allowtransparency="true" title="Post do Instagram da Dra. Hemmile Aguiar 2"></iframe>
+                    </div>
+                    <div class="ig-post fade-in">
+                        <iframe src="https://www.instagram.com/p/DYiOHI0lrd_/embed" loading="lazy" allowtransparency="true" title="Post do Instagram da Dra. Hemmile Aguiar 3"></iframe>
+                    </div>
+                </div>
+
+                <div class="ig-btn-wrapper fade-in">
+                    <a href="https://www.instagram.com/drahemmileaguiar?igsh=Y2l6N3M5ZGNuaGp5" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Ver Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- === FAQ === -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Dúvidas frequentes</h2>
+                </div>
+
+                <div class="faq-container">
+                    <details class="fade-in">
+                        <summary>Quando devo procurar uma ginecologista?</summary>
+                        <div class="faq-content">
+                            <p>A avaliação é indicada quando há sintomas, dúvidas, necessidade de orientação especializada, acompanhamento preventivo ou cuidado individualizado. Cada caso deve ser analisado por meio de consulta médica.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="fade-in">
+                        <summary>A consulta define se preciso de tratamento?</summary>
+                        <div class="faq-content">
+                            <p>A consulta é uma etapa essencial para avaliar histórico, sintomas, exames e necessidades individuais. A indicação de tratamento depende da análise médica.</p>
+                        </div>
+                    </details>
+
+                    <details class="fade-in">
+                        <summary>Posso levar exames anteriores?</summary>
+                        <div class="faq-content">
+                            <p>Sim. Exames anteriores podem contribuir para a avaliação, mas a necessidade de novos exames será definida pela médica conforme cada caso.</p>
+                        </div>
+                    </details>
+
+                    <details class="fade-in">
+                        <summary>O site substitui a consulta médica?</summary>
+                        <div class="faq-content">
+                            <p>Não. As informações do site têm caráter educativo e não substituem uma consulta médica individualizada.</p>
+                        </div>
+                    </details>
+
+                    <details class="fade-in">
+                        <summary>O tratamento tem resultado garantido?</summary>
+                        <div class="faq-content">
+                            <p>Não. Nenhum tratamento médico deve ser apresentado como garantia de resultado. A indicação, os riscos, as possibilidades e as limitações dependem de avaliação individual.</p>
+                        </div>
+                    </details>
+
+                    <details class="fade-in">
+                        <summary>Como agendar uma consulta?</summary>
+                        <div class="faq-content">
+                            <p>O agendamento pode ser feito pelo WhatsApp, clicando nos botões disponíveis no site para falar diretamente com a equipe.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">Dra. Hemmile Aguiar</div>
+                    <div class="footer-sub">Ginecologia e Obstetrícia</div>
+                    <p class="footer-text">CRM-PR 40660 | RQE 34151</p>
+                    <p class="footer-text">Curitiba — PR</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contatos</h3>
+                    <p class="footer-text"><strong>WhatsApp:</strong> <br><a href="https://wa.me/5541991976060" target="_blank" style="color:var(--rose)">(41) 99197-6060</a></p>
+                    <p class="footer-text" style="margin-top: 10px;"><strong>Instagram:</strong> <br><a href="https://www.instagram.com/drahemmileaguiar?igsh=Y2l6N3M5ZGNuaGp5" target="_blank" style="color:var(--rose)">@drahemmileaguiar</a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Endereços</h3>
+                    <p class="footer-text"><strong>Clínica Werka — Saúde & Longevidade</strong><br>Avenida Sete de Setembro, 4682, Batel, Curitiba — PR</p>
+                    <p class="footer-text" style="margin-top: 15px;"><strong>Lumière Saúde Integrada</strong><br>Rua Dr. Goulin, 321, Alto da Glória, Curitiba — PR</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <nav class="footer-links">
+                        <a href="#hero">Início</a>
+                        <a href="#sobre">Sobre a médica</a>
+                        <a href="#atuacao">Áreas de atuação</a>
+                        <a href="#servicos">Serviços</a>
+                        <a href="#localizacao">Localização</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>As informações deste site têm caráter educativo e informativo e não substituem uma consulta médica individualizada. O diagnóstico, a indicação de tratamento e a indicação de qualquer procedimento dependem de avaliação médica presencial ou por telemedicina regulamentada. Em caso de dúvidas, agende uma consulta.</p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Dra. Hemmile Aguiar. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5541991976060?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Hemmile%20Aguiar." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Agendar consulta pelo WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
+
+    <!-- === JAVASCRIPT INTEGRADO === -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Menu Mobile Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            // Fechar menu ao clicar em um link (mobile)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // 2. Header Sticky / Sombra ao rolar
+            const header = document.getElementById('header');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Animações de Scroll (Fade In)
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const fadeObserverOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 // Dispara quando 15% do elemento estiver visível
+            };
+
+            const fadeObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Opcional: descomente a linha abaixo para animar apenas uma vez
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, fadeObserverOptions);
+
+            fadeElements.forEach(element => {
+                fadeObserver.observe(element);
+            });
+
+            // 4. Fechar outras FAQs ao abrir uma (Accordion Comportamento Opcional)
+            const detailsElements = document.querySelectorAll('details');
+            
+            detailsElements.forEach(targetDetail => {
+                targetDetail.addEventListener('click', () => {
+                    detailsElements.forEach(detail => {
+                        if (detail !== targetDetail) {
+                            detail.removeAttribute('open');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Painel de conteúdos | Dra. Hemmile Aguiar</title>
+  <style>
+    :root{--bg:#faf5f2;--ink:#302d30;--wine:#7c4c59;--line:#e4d6d5}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Arial,sans-serif}.wrap{width:min(760px,calc(100% - 32px));margin:48px auto}h1,h2{font-family:Georgia,serif;color:var(--wine)}.card{margin:20px 0;padding:25px;background:#fff;border:1px solid var(--line);border-radius:14px}label{display:block;margin:14px 0 5px;font-weight:700;font-size:.9rem}input,textarea{width:100%;padding:11px;border:1px solid #bfaeb1;border-radius:8px;font:inherit}textarea{min-height:120px;resize:vertical}button{padding:11px 17px;border:0;border-radius:999px;background:var(--wine);color:#fff;font-weight:700;cursor:pointer}.secondary{background:transparent;color:var(--wine);border:1px solid var(--wine)}.hidden{display:none}.status{min-height:24px;color:var(--wine);font-weight:700}.post{padding:16px 0;border-top:1px solid var(--line)}.post:first-child{border-top:0}.post h3{margin:0}.post small{color:#665d61}.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  </style>
+</head>
+<body><main class="wrap"><a href="/">← Voltar ao site</a><h1>Painel de conteúdos</h1><p>Publique conteúdos educativos que aparecerão na seção “Conteúdos” do site.</p>
+  <section class="card" id="login-card"><h2>Acesso</h2><label for="password">Senha do painel</label><input id="password" type="password" autocomplete="current-password"><p class="status" id="login-status"></p><button id="login" type="button">Entrar</button></section>
+  <section class="card hidden" id="editor"><h2>Nova publicação</h2><form id="post-form"><label for="category">Categoria</label><input id="category" maxlength="48" value="Saúde feminina" required><label for="title">Título</label><input id="title" maxlength="120" required><label for="excerpt">Resumo</label><textarea id="excerpt" maxlength="280" required></textarea><label for="body">Conteúdo</label><textarea id="body" maxlength="8000" required></textarea><div class="actions"><button type="submit">Publicar no site</button><span class="status" id="post-status"></span></div></form></section>
+  <section class="card hidden" id="published"><h2>Publicações</h2><div id="posts"></div></section>
+</main><script src="/admin/admin.js"></script></body></html>

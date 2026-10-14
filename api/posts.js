@@ -38,7 +38,10 @@ export default {
       if (request.method === 'POST') {
         if (!isAuthorized(request)) return response({ error: 'Não autorizado.' }, 401);
 
-        const payload = await request.json();
+        // The panel uses an empty authenticated POST solely to validate the password.
+        // Treat an empty or malformed body as an incomplete publication (422), rather
+        // than allowing request.json() to turn a valid login into a server error.
+        const payload = await request.json().catch(() => ({}));
         const title = clean(payload.title, 120);
         const excerpt = clean(payload.excerpt, 280);
         const body = clean(payload.body, 8000);

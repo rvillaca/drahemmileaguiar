@@ -501,6 +501,115 @@ p {
   height: 100%;
   min-height: 420px;
 }
+.editorial-page {
+  background: #fff;
+}
+.editorial-hero {
+  padding: 104px 0 92px;
+  background: linear-gradient(125deg, var(--off), #f2e1e1 70%, var(--pale));
+}
+.editorial-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: clamp(36px, 7vw, 100px);
+  align-items: end;
+}
+.editorial-hero p {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+.editorial-index {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #ffffff90;
+  border-radius: var(--radius);
+  background: #ffffffa6;
+  box-shadow: 0 16px 42px #52313b12;
+}
+.editorial-index > span {
+  padding: 18px 20px 10px;
+  color: var(--wine);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.editorial-index a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 13px 20px;
+  background: #fff8;
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.editorial-index a:hover {
+  background: #fff;
+}
+.editorial-index b {
+  color: var(--rose);
+  font: 600 1.25rem var(--serif);
+}
+.editorial-scroll {
+  padding: 92px 0;
+}
+.editorial-layout {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(34px, 7vw, 104px);
+  align-items: start;
+}
+.editorial-aside {
+  position: sticky;
+  top: 108px;
+  padding: 22px 0 22px 21px;
+  border-left: 2px solid var(--rose);
+}
+.editorial-aside p {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+.editorial-stories {
+  display: grid;
+}
+.editorial-story {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 25px;
+  padding: 52px 0;
+  border-top: 1px solid var(--line);
+}
+.editorial-story:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.story-number {
+  color: var(--pale);
+  font: 600 clamp(3rem, 5vw, 4.6rem)/0.85 var(--serif);
+}
+.editorial-story h2 {
+  margin: 7px 0 19px;
+}
+.editorial-story p {
+  max-width: 710px;
+  color: var(--muted);
+}
+.editorial-story-last {
+  padding-bottom: 0;
+}
+.editorial-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
 .cta {
   padding: 76px 0;
   text-align: center;
@@ -748,7 +857,9 @@ footer {
   }
   .hero-grid,
   .about-grid,
-  .when-grid {
+  .when-grid,
+  .editorial-hero-grid,
+  .editorial-layout {
     grid-template-columns: 1fr;
   }
   .hero-copy {
@@ -790,6 +901,21 @@ footer {
   .location-card .map-embed iframe {
     min-height: 320px;
     height: 320px;
+  }
+  .editorial-hero {
+    padding: 72px 0 64px;
+  }
+  .editorial-aside {
+    position: static;
+    padding: 0 0 22px 18px;
+  }
+  .editorial-story {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    padding: 42px 0;
+  }
+  .story-number {
+    font-size: 3.4rem;
   }
   .theme {
     grid-template-columns: 1fr;

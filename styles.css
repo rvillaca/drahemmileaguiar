@@ -601,6 +601,29 @@ p {
   max-width: 710px;
   color: var(--muted);
 }
+.editorial-story .post-date {
+  margin: 9px 0 0;
+  color: var(--wine);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.editorial-story .post-excerpt {
+  margin-bottom: 21px;
+  color: var(--ink);
+  font-size: 1.04rem;
+  font-weight: 600;
+}
+.post-body p + p {
+  margin-top: 16px;
+}
+.editorial-empty {
+  color: var(--muted);
+}
+.editorial-follow {
+  padding-top: 0;
+}
 .editorial-story-last {
   padding-bottom: 0;
 }

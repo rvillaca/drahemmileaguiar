@@ -11,17 +11,28 @@ const previewExcerpt = document.querySelector('#preview-excerpt');
 const previewBody = document.querySelector('#preview-body');
 let password = '';
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>'"]/g, (char) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+  }[char]));
+}
+
 function authHeaders() {
   return { 'Content-Type': 'application/json', Authorization: `Bearer ${password}` };
 }
 
 async function loadPosts() {
-  const response = await fetch('/api/posts');
-  const { posts } = await response.json();
-  postsElement.innerHTML = posts.length ? posts.map((post) => `
-    <article class="post"><small>${post.category} · ${new Date(post.createdAt).toLocaleDateString('pt-BR')}</small>
-    <h3>${post.title}</h3><p>${post.excerpt}</p>
-    <button class="secondary" data-delete="${post.id}" type="button">Excluir</button></article>`).join('') : '<p>Nenhuma publicação ainda.</p>';
+  try {
+    const response = await fetch('/api/posts');
+    if (!response.ok) throw new Error('Não foi possível carregar as publicações.');
+    const { posts } = await response.json();
+    postsElement.innerHTML = posts.length ? posts.map((post) => `
+      <article class="post"><small>${escapeHtml(post.category)} · Publicado em ${new Date(post.createdAt).toLocaleDateString('pt-BR')}</small>
+      <h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.excerpt)}</p>
+      <button class="secondary" data-delete="${escapeHtml(post.id)}" type="button">Excluir publicação</button></article>`).join('') : '<p>Nenhuma publicação ainda.</p>';
+  } catch (error) {
+    postsElement.innerHTML = '<p>Não foi possível carregar as publicações.</p>';
+  }
 }
 
 function setPreview(element, value, placeholder) {
@@ -69,6 +80,7 @@ form.addEventListener('submit', async (event) => {
 postsElement.addEventListener('click', async (event) => {
   const id = event.target.dataset.delete;
   if (!id || !confirm('Excluir esta publicação?')) return;
-  await fetch(`/api/posts?id=${encodeURIComponent(id)}`, { method: 'DELETE', headers: authHeaders() });
+  const response = await fetch(`/api/posts?id=${encodeURIComponent(id)}`, { method: 'DELETE', headers: authHeaders() });
+  if (!response.ok) { alert('Não foi possível excluir esta publicação.'); return; }
   await loadPosts();
 });

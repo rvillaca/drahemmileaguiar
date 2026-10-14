@@ -204,11 +204,7 @@ p {
 }
 .hero-photo img {
   width: 100%;
-  aspect-ratio: 1/1.08;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 40% 40% 10px 10px;
-  box-shadow: 0 18px 50px #52313b25;
+  height: auto;
 }
 .about {
   background: #fff;
@@ -221,9 +217,7 @@ p {
 }
 .about-grid > img {
   width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  border-radius: var(--radius);
+  height: auto;
 }
 .about-copy {
   color: var(--muted);
@@ -385,9 +379,7 @@ p {
 }
 .when-grid > img {
   width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  border-radius: var(--radius);
+  height: auto;
 }
 .gallery {
   background: #fff;

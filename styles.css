@@ -298,6 +298,22 @@ p {
   color: var(--muted);
   max-width: 790px;
 }
+.treatment-resources {
+  display: grid;
+  gap: 10px;
+  max-width: 790px;
+  margin: 19px 0;
+}
+.treatment-resources p {
+  margin: 0;
+  padding: 13px 16px;
+  border-left: 3px solid var(--rose);
+  background: var(--off);
+  font-size: 0.9rem;
+}
+.treatment-resources strong {
+  color: var(--wine);
+}
 .general {
   margin-top: 42px;
   padding-top: 42px;

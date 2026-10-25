@@ -691,16 +691,45 @@ p {
 }
 .article-card details {
   margin-top: 14px;
+  margin-bottom: 0;
+  border: 0;
+  background: transparent;
 }
 .article-card summary {
-  padding: 0;
-  background: transparent;
-  border: 0;
+  min-height: 42px;
+  align-items: center;
+  padding: 9px 13px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--wine);
   font-size: 0.82rem;
+  line-height: 1.2;
+}
+.article-card summary:hover {
+  border-color: var(--rose);
+  background: #fffaf8;
+}
+.article-card summary:focus-visible {
+  outline: 3px solid var(--pale);
+  outline-offset: 2px;
+}
+.article-card summary:after {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.article-card details[open] summary {
+  border-color: var(--rose);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .article-card details p {
-  padding: 11px 0 0;
+  padding: 12px 13px;
   margin: 0;
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-radius: 0 0 9px 9px;
+  background: #fff;
 }
 .instagram-embed-wrap {
   width: min(100%, 540px);

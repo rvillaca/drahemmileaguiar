@@ -136,8 +136,19 @@ p {
 }
 .brand {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 11px;
   line-height: 1.1;
+}
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  object-fit: contain;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
 }
 .brand b {
   font: 700 1.55rem var(--serif);

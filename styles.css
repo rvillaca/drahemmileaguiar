@@ -271,6 +271,23 @@ p {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 34px #52313b18;
+}
+.card-regenerativa {
+  border-top: 4px solid #ad6d7d;
+}
+.card-estetica {
+  border-top: 4px solid #c58f9b;
+}
+.card-hormonal {
+  border-top: 4px solid #806973;
+}
+.card-integrativo {
+  border-top: 4px solid #9b7b6a;
 }
 .card .num {
   display: grid;
@@ -296,18 +313,82 @@ p {
 }
 .theme {
   display: grid;
-  grid-template-columns: 145px 1fr;
+  grid-template-columns: 132px minmax(0, 1fr);
   gap: 32px;
-  padding: 31px 0;
-  border-top: 1px solid var(--line);
+  margin: 18px 0;
+  padding: clamp(32px, 5vw, 62px);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.theme:before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  right: -90px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.12;
+  pointer-events: none;
+}
+.theme-regenerativa {
+  background: #fbf5f3;
+  color: #7c4c59;
+}
+.theme-estetica {
+  background: #f3e7e6;
+  color: #754957;
+}
+.theme-hormonal {
+  background: #f4f0ed;
+  color: #65535a;
+}
+.theme-integrativo {
+  background: #eee5df;
+  color: #6e5548;
 }
 .theme-no {
-  color: var(--rose);
-  font: 600 4rem/0.9 var(--serif);
+  position: relative;
+  z-index: 1;
+  color: currentColor;
+  font: 600 clamp(3.8rem, 6vw, 5.5rem)/0.8 var(--serif);
+  opacity: 0.72;
+}
+.theme > div {
+  position: relative;
+  z-index: 1;
+}
+.theme-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid currentColor;
+  color: currentColor;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
 }
 .theme p {
-  color: var(--muted);
+  color: #4e4448;
   max-width: 790px;
+}
+.theme h3 {
+  margin-bottom: 15px;
+  color: currentColor;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+}
+.theme .btn {
+  margin-top: 7px;
+  border-color: currentColor;
+  color: currentColor;
+}
+.theme .btn:hover {
+  background: currentColor;
+  color: #fff;
 }
 .treatment-resources {
   display: grid;
@@ -318,12 +399,12 @@ p {
 .treatment-resources p {
   margin: 0;
   padding: 13px 16px;
-  border-left: 3px solid var(--rose);
-  background: var(--off);
+  border-left: 3px solid currentColor;
+  background: #fff9;
   font-size: 0.9rem;
 }
 .treatment-resources strong {
-  color: var(--wine);
+  color: currentColor;
 }
 .general {
   margin-top: 42px;

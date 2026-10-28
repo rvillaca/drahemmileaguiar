@@ -362,6 +362,17 @@ p {
   border-color: #fff;
   color: var(--wine);
 }
+.integrative-cta {
+  background: #6f554a !important;
+  border-color: #6f554a !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px #6f554a2b;
+}
+.integrative-cta:hover {
+  background: #563f36 !important;
+  border-color: #563f36 !important;
+  color: #fff !important;
+}
 .themes {
   background: #fff;
 }

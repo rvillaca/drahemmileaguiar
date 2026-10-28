@@ -258,55 +258,109 @@ p {
 .location {
   background: #f5ece9;
 }
+.priority {
+  padding: 104px 0;
+}
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 .card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 26px;
-  background: #fff;
-  border: 1px solid var(--line);
+  min-height: 335px;
+  padding: clamp(30px, 4vw, 46px);
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  border: 0;
   border-radius: var(--radius);
+  box-shadow: 0 14px 34px #52313b12;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -78px;
+  bottom: -128px;
+  width: 290px;
+  height: 290px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.16;
+}
+.card:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 40px;
+  top: 38px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.2;
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 34px #52313b18;
+  box-shadow: 0 21px 42px #52313b22;
 }
 .card-regenerativa {
-  border-top: 4px solid #ad6d7d;
+  background: linear-gradient(135deg, #6c3d4d, #8c5867);
+  color: #fff;
 }
 .card-estetica {
-  border-top: 4px solid #c58f9b;
+  background: #f4e7e5;
+  color: #754957;
 }
 .card-hormonal {
-  border-top: 4px solid #806973;
+  background: #e9e4de;
+  color: #584c50;
 }
 .card-integrativo {
-  border-top: 4px solid #9b7b6a;
+  background: #eaded5;
+  color: #6f554a;
 }
 .card .num {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  margin-bottom: 18px;
-  border-radius: 50%;
-  background: var(--pale);
-  color: var(--wine);
-  font: 600 1.3rem var(--serif);
+  margin-bottom: 22px;
+  color: currentColor;
+  font: 600 1rem/1 var(--serif);
+  letter-spacing: 0.12em;
+  opacity: 0.72;
+}
+.card-kicker {
+  margin-bottom: 10px;
+  color: currentColor;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
 }
 .card h3 {
-  margin-bottom: 11px;
+  max-width: 360px;
+  margin-bottom: 14px;
+  color: currentColor;
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
 }
 .card p {
   flex: 1;
-  color: var(--muted);
-  font-size: 0.86rem;
+  max-width: 400px;
+  color: currentColor;
+  font-size: 0.92rem;
+  opacity: 0.9;
+}
+.card .btn {
+  margin-top: 14px;
+  border-color: currentColor;
+  color: currentColor;
+}
+.card-regenerativa .btn:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--wine);
 }
 .themes {
   background: #fff;

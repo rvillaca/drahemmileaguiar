@@ -217,6 +217,27 @@ p {
   width: 100%;
   height: auto;
 }
+.personal-note {
+  padding: 52px 0;
+  background: #f1ebea;
+}
+.personal-note-card {
+  max-width: 900px;
+  margin: auto;
+  padding: clamp(30px, 5vw, 48px) clamp(28px, 6vw, 64px);
+  border-left: 2px solid #9c727d;
+  background: #f8f5f3;
+}
+.personal-note-card h2 {
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+}
+.personal-note-card p {
+  max-width: 710px;
+  margin: 0;
+  color: #594f52;
+  font-size: 1.03rem;
+}
 .about {
   background: #fff;
 }
@@ -1037,6 +1058,14 @@ footer {
   }
   .hero {
     padding: 38px 0 58px;
+  }
+  .personal-note {
+    padding: 36px 0;
+  }
+  .personal-note-card {
+    text-align: center;
+    border-top: 2px solid #9c727d;
+    border-left: 0;
   }
   .hero-grid,
   .about-grid,

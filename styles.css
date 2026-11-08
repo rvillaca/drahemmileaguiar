@@ -309,20 +309,20 @@ p {
   box-shadow: 0 21px 42px #52313b22;
 }
 .card-regenerativa {
-  background: linear-gradient(135deg, #6c3d4d, #8c5867);
+  background: linear-gradient(135deg, #654552, #835d6b);
   color: #fff;
 }
 .card-estetica {
-  background: #f4e7e5;
-  color: #754957;
+  background: #f1ebea;
+  color: #624d54;
 }
 .card-hormonal {
-  background: #e9e4de;
-  color: #584c50;
+  background: linear-gradient(135deg, #484549, #625e62);
+  color: #fff;
 }
 .card-integrativo {
-  background: #eaded5;
-  color: #6f554a;
+  background: #ece9e7;
+  color: #514b4e;
 }
 .card .num {
   margin-bottom: 22px;
@@ -357,20 +357,21 @@ p {
   border-color: currentColor;
   color: currentColor;
 }
-.card-regenerativa .btn:hover {
+.card-regenerativa .btn:hover,
+.card-hormonal .btn:hover {
   background: #fff;
   border-color: #fff;
-  color: var(--wine);
+  color: #514047;
 }
 .integrative-cta {
-  background: #6f554a !important;
-  border-color: #6f554a !important;
+  background: #5a5155 !important;
+  border-color: #5a5155 !important;
   color: #fff !important;
-  box-shadow: 0 8px 18px #6f554a2b;
+  box-shadow: 0 8px 18px #5a51552b;
 }
 .integrative-cta:hover {
-  background: #563f36 !important;
-  border-color: #563f36 !important;
+  background: #443d40 !important;
+  border-color: #443d40 !important;
   color: #fff !important;
 }
 .themes {

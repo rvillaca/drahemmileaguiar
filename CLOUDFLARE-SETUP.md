@@ -20,6 +20,6 @@ Este projeto está preparado para ser publicado no **Cloudflare Pages** com o pa
 
 No projeto Pages, em **Custom domains**, adicione o domínio principal e `www`. Caso o domínio use os nameservers da Cloudflare, a configuração é automática; caso contrário, a Cloudflare mostrará os registros DNS necessários.
 
-## Migração dos conteúdos existentes
+## Painel de conteúdos
 
-Antes de desligar a Vercel, copie as publicações existentes do endpoint atual para a tabela `posts` do D1. Depois de confirmar que o painel administrativo cria, lista e exclui conteúdos normalmente na Cloudflare, a Vercel pode ser desativada.
+O painel fica em `https://drahemmileaguiar.com.br/admin/`. Ele usa o banco D1 associado à variável `POSTS_DB`; mantenha o segredo `CMS_PASSWORD` configurado no projeto Pages.
